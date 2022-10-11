@@ -8,11 +8,21 @@
     <title>Giochi</title>
 </head>
 <body>
-    
-    <input id="email" class="" type="email" value="email@email.com" placeholder="ciao">
-    <button class="btn btn-info">invia</button>
-    <button id="genera-numero" class="btn">genera un numero</button>
-    <div id="wrapper"></div>
+    <div class="container-lg">
+        
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input id="email" type="email" class="form-control" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="d-inline-block rounded-0 text-bg-light" id="wrapper"></div>
+
+        </div>
+        
+        <button id="genera-numero" class="btn  btn-primary">genera un numero</button>
+        <div id="wrapper2"></div>
+    </div>
+
     <script src="js/script.js"></script>
 </body>
 </html>
