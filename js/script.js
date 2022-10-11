@@ -21,9 +21,13 @@ btn.addEventListener('click', function() {
      console.log(archivio[i]);
     if (emailUtente === archivio[i]) {
         wrapper.innerHTML = 'Email Presente';
+        wrapper.classList.remove('d-none');
+        wrapper.classList.remove('text-bg-dark');
         wrapper.classList.add('text-bg-success');
         console.log('successo fu');
     }else {
+        wrapper.classList.remove('d-none');
+        wrapper.classList.add('text-bg-dark')
         wrapper.innerHTML = 'Email Non Presente';
     }
     }
@@ -42,30 +46,33 @@ se è più basso perde
 
 
 const wrapper2 = document.getElementById('wrapper2');
-
-
+const spanUtente = document.getElementById('n-Utente');
+const spanComputer = document.getElementById('n-Computer');
+const spanRisultato = document.getElementById('risultato');
+let message = '';
+// message = `Chi vincerà?`;
+// spanRisultato.innerHTML = message;
 
 const btnDadi = document.getElementById('genera-numero');
 btnDadi.addEventListener('click', function () {
-    let message = '';
     //crea un numero random tra 1 e 6 
     let nUtente = Math.floor(Math.random() * 6) +1;
     console.log(nUtente);
-    message += ` numero utente ${nUtente}`;
-
     let nComputer =  Math.floor(Math.random() * 6) +1;
     console.log(nComputer);
-    message += ` numero Computer ${nComputer}`;
+    spanUtente.innerHTML = `${nUtente}`;
+    spanComputer.innerHTML = `${nComputer}`;
+    
 
     if (nUtente > nComputer) {
         console.log('vince utente');
-        message += 'hai vinto!!';
+        message = 'hai vinto!!';
     }else if (nUtente == nComputer) {
         console.log('pari');
-        message += 'pari';
+        message = 'pari';
     }else {
         console.log('vince computer');
-        message += 'hai perso, il computer vince'
+        message = 'hai perso, il computer vince'
     }
-    wrapper2.innerHTML = message;
+    spanRisultato.innerHTML = message;
 });

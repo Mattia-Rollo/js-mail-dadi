@@ -9,17 +9,28 @@
 </head>
 <body>
     <div class="container-lg">
-        
+        <h1 class="text-center display-3 mt-2 fw-semibold">Verifica la tua email</h1>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Email address</label>
             <input id="email" type="email" class="form-control" aria-describedby="emailHelp">
             <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <div class="d-inline-block rounded-0 text-bg-light" id="wrapper"></div>
+            <button type="submit" class="btn btn-primary">Verifica</button>
+            <button class="btn btn-dark d-none" id="wrapper"></button>
 
         </div>
-        
-        <button id="genera-numero" class="btn  btn-primary">genera un numero</button>
+        <h2 class="mb-3 text-center">Gioca a Dadi con il Computer</h2>
+        <div class="row bg-light py-4">
+            <div class="col-12 text-center"><button id="genera-numero" class="btn  btn-primary">Lancia i Dadi</button></div>
+            <div class="col-5 text-center fs-3">Umano</div>
+            <div class="col-2 text-center fs-2"> vs</div>
+            <div class="col-5 text-center fs-3">A.I.</div>
+        </div>
+        <div class="row bg-light">
+            <div class="col-5 text-center fs-3"><span id="n-Utente"></span></div>
+            <div class="col-2 text-center fs-2"><span id="risultato"></span></div>
+            <div class="col-5 text-center fs-3"><span id="n-Computer"></span></div>
+            
+        </div>
         <div id="wrapper2"></div>
     </div>
 
