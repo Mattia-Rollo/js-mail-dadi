@@ -20,8 +20,11 @@ btn.addEventListener('click', function() {
     for(let i = 0; i < archivio.length; i++) {
      console.log(archivio[i]);
     if (emailUtente === archivio[i]) {
-        wrapper.append('Email Presente');
+        wrapper.innerHTML = 'Email Presente';
+        wrapper.classList.add('text-bg-success');
         console.log('successo fu');
+    }else {
+        wrapper.innerHTML = 'Email Non Presente';
     }
     }
 }
@@ -38,7 +41,7 @@ se è più basso perde
 */
 
 
-
+const wrapper2 = document.getElementById('wrapper2');
 
 
 
@@ -64,5 +67,5 @@ btnDadi.addEventListener('click', function () {
         console.log('vince computer');
         message += 'hai perso, il computer vince'
     }
-    wrapper.innerHTML = message;
+    wrapper2.innerHTML = message;
 });
