@@ -21,7 +21,34 @@ btn.addEventListener('click', function() {
      console.log(archivio[i]);
     if (emailUtente === archivio[i]) {
         document.getElementById('wrapper').innerHTML = "Email confermata";
+        console.log('successo fu');
     }
     }
 }
 );
+
+/*
+giocare a dadi con il compiuter
+
+generare un numero random all'utente tra 1 a 6 e salvarlo in un variabile
+generare un numero random al pc e salvarlo in una variabile 
+confrontare i due numeri 
+se l'utente ha un numero più altro vince
+se è più basso perde 
+*/
+
+let nUtente = Math.floor(Math.random() * 6) +1;
+console.log(nUtente);
+
+let nComputer =  Math.floor(Math.random() * 6) +1;
+console.log(nComputer);
+
+if (nUtente > nComputer) {
+    console.log('vince utente');
+}else if (nUtente == nComputer) {
+    console.log('pari')
+}else {
+    console.log('vince computer');
+}
+
+
