@@ -15,21 +15,32 @@ console.log(archivio);
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', function() {
-    const emailUtente = document.getElementById('email').value;
-    console.log(emailUtente);
+    let check = false;
+    let emailUtente = document.getElementById('email').value;
+    // console.log(emailUtente);
     for(let i = 0; i < archivio.length; i++) {
-     console.log(archivio[i]);
+    //  console.log(archivio[i]);
     if (emailUtente === archivio[i]) {
+        // wrapper.innerHTML = 'Email Presente';
+        // wrapper.classList.remove('d-none');
+        // wrapper.classList.remove('text-bg-dark');
+        // wrapper.classList.add('text-bg-success');
+        console.log(emailUtente);
+        check = true;
+    }
+    if(check) {
         wrapper.innerHTML = 'Email Presente';
         wrapper.classList.remove('d-none');
         wrapper.classList.remove('text-bg-dark');
         wrapper.classList.add('text-bg-success');
-        console.log('successo fu');
     }else {
         wrapper.classList.remove('d-none');
         wrapper.classList.add('text-bg-dark')
         wrapper.innerHTML = 'Email Non Presente';
+        console.log(emailUtente);
     }
+
+
     }
 }
 );
@@ -72,7 +83,7 @@ btnDadi.addEventListener('click', function () {
         message = 'pari';
     }else {
         console.log('vince computer');
-        message = 'hai perso, il computer vince'
+        message = 'hai perso...'
     }
     spanRisultato.innerHTML = message;
 });
