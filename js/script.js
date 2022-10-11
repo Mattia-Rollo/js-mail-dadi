@@ -10,7 +10,7 @@ se cè una email nell'archivio che corrisponde a quella inserita dall'utente sta
 const wrapper = document.getElementById('wrapper');
 
 const archivio = ['mariorossi@gmail.com','macciocapatonda@gmail.com','mattiarollo89@gmail.com'];
-console.log(archivio);
+// console.log(archivio);
 
 const btn = document.querySelector('button');
 
@@ -38,7 +38,7 @@ btn.addEventListener('click', function() {
         wrapper.classList.remove('d-none');
         wrapper.classList.add('text-bg-dark')
         wrapper.innerHTML = 'Email Non Presente';
-        console.log(emailUtente);
+        // console.log(emailUtente);
     }
 
 
