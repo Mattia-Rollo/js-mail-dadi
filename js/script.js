@@ -25,7 +25,7 @@ btn.addEventListener('click', function() {
         // wrapper.classList.remove('d-none');
         // wrapper.classList.remove('text-bg-dark');
         // wrapper.classList.add('text-bg-success');
-        console.log(emailUtente);
+        // console.log(emailUtente);
         check = true;
     }
     if(check) {
@@ -33,7 +33,8 @@ btn.addEventListener('click', function() {
         wrapper.classList.remove('d-none');
         wrapper.classList.remove('text-bg-dark');
         wrapper.classList.add('text-bg-success');
-    }else {
+    }
+    else {
         wrapper.classList.remove('d-none');
         wrapper.classList.add('text-bg-dark')
         wrapper.innerHTML = 'Email Non Presente';
