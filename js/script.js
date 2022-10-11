@@ -7,7 +7,7 @@ se cè una email nell'archivio che corrisponde a quella inserita dall'utente sta
 */ 
 
 
-
+const wrapper = document.getElementById('wrapper');
 
 const archivio = ['mariorossi@gmail.com','macciocapatonda@gmail.com','mattiarollo89@gmail.com'];
 console.log(archivio);
@@ -20,7 +20,7 @@ btn.addEventListener('click', function() {
     for(let i = 0; i < archivio.length; i++) {
      console.log(archivio[i]);
     if (emailUtente === archivio[i]) {
-        document.getElementById('wrapper').innerHTML = "Email confermata";
+        wrapper.append('Email Presente');
         console.log('successo fu');
     }
     }
@@ -37,18 +37,32 @@ se l'utente ha un numero più altro vince
 se è più basso perde 
 */
 
-let nUtente = Math.floor(Math.random() * 6) +1;
-console.log(nUtente);
-
-let nComputer =  Math.floor(Math.random() * 6) +1;
-console.log(nComputer);
-
-if (nUtente > nComputer) {
-    console.log('vince utente');
-}else if (nUtente == nComputer) {
-    console.log('pari')
-}else {
-    console.log('vince computer');
-}
 
 
+
+
+
+const btnDadi = document.getElementById('genera-numero');
+btnDadi.addEventListener('click', function () {
+    let message = '';
+    //crea un numero random tra 1 e 6 
+    let nUtente = Math.floor(Math.random() * 6) +1;
+    console.log(nUtente);
+    message += ` numero utente ${nUtente}`;
+
+    let nComputer =  Math.floor(Math.random() * 6) +1;
+    console.log(nComputer);
+    message += ` numero Computer ${nComputer}`;
+
+    if (nUtente > nComputer) {
+        console.log('vince utente');
+        message += 'hai vinto!!';
+    }else if (nUtente == nComputer) {
+        console.log('pari');
+        message += 'pari';
+    }else {
+        console.log('vince computer');
+        message += 'hai perso, il computer vince'
+    }
+    wrapper.innerHTML = message;
+});
