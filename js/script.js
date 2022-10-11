@@ -79,12 +79,18 @@ btnDadi.addEventListener('click', function () {
     if (nUtente > nComputer) {
         console.log('vince utente');
         message = 'hai vinto!!';
+        spanRisultato.classList.remove('text-danger')
+        spanRisultato.classList.add('text-success');
     }else if (nUtente == nComputer) {
         console.log('pari');
         message = 'pari';
+        spanRisultato.classList.remove('text-danger');
+        spanRisultato.classList.remove('text-success');
     }else {
         console.log('vince computer');
-        message = 'hai perso...'
+        message = 'hai perso'
+        spanRisultato.classList.add('text-danger');
+        spanRisultato.classList.remove('text-success');
     }
     spanRisultato.innerHTML = message;
 });
